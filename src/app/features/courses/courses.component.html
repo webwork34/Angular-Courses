@@ -1,0 +1,16 @@
+<div>
+  <app-header>
+    <div class="logout-info">
+      <p>{{ name }}</p>
+      <app-button [btnName]="logOut"></app-button>
+    </div>
+  </app-header>
+
+  <app-course [courses]="courses"></app-course>
+
+  <app-modal></app-modal>
+
+  <app-info [infoTitle]="infoTitle" [infoText]="infoText">
+    <app-button [btnName]="addCourse"></app-button>
+  </app-info>
+</div>
