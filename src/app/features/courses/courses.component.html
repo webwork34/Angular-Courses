@@ -6,7 +6,9 @@
     </div>
   </app-header>
 
-  <app-course [courses]="courses"></app-course>
+  <app-search (onSearch)="search($event)"></app-search>
+
+  <app-course [courses]="courses" [searchStr]="searchStr"></app-course>
 
   <app-modal></app-modal>
 
@@ -14,3 +16,15 @@
     <app-button [btnName]="addCourse"></app-button>
   </app-info>
 </div>
+
+<hr />
+
+<app-login></app-login>
+
+<hr />
+
+<app-registration></app-registration>
+
+<hr />
+
+<app-course-edit></app-course-edit>

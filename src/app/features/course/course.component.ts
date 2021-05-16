@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, DoCheck, Input, OnInit } from '@angular/core';
 import { faTrash, faPen } from '@fortawesome/free-solid-svg-icons';
 import { ICourse } from 'src/app/interfaces';
 
@@ -7,8 +7,12 @@ import { ICourse } from 'src/app/interfaces';
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.scss'],
 })
-export class CourseComponent implements OnInit {
-  @Input() courses: ICourse;
+export class CourseComponent implements OnInit, DoCheck {
+  @Input() courses: ICourse[];
+
+  @Input() searchStr?: string;
+
+  savedCorces: ICourse[];
 
   showCourse = 'Show Course';
 
@@ -17,5 +21,17 @@ export class CourseComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.savedCorces = this.courses;
+  }
+
+  ngDoCheck() {
+    if (this.searchStr) {
+      this.courses = this.courses.filter(
+        (course) => course.title.toLowerCase() === this.searchStr.toLowerCase()
+      );
+    } else if (this.searchStr === '') {
+      this.courses = this.savedCorces;
+    }
+  }
 }

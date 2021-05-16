@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RegistrationComponent } from './registration.component';
+import { CourseEditComponent } from './course-edit.component';
 import { SharedModule } from './../../shared/shared.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CustomPipesModule } from './../../shared/pipes/custom-pipes.module';
 
 @NgModule({
-  declarations: [RegistrationComponent],
+  declarations: [CourseEditComponent],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    FontAwesomeModule,
+    CustomPipesModule,
   ],
-  exports: [RegistrationComponent],
+  exports: [CourseEditComponent],
 })
-export class RegistrationModule {}
+export class CourseEditModule {}

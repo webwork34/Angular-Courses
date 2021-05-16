@@ -12,6 +12,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmailValidatorDirective } from './validators/email-validator.directive';
+import { ToggleDirective } from './directives/toggle.directive';
 
 const COMPONENTS = [
   ButtonComponent,
@@ -20,6 +22,8 @@ const COMPONENTS = [
   SearchComponent,
   ModalComponent,
   WindowComponent,
+  EmailValidatorDirective,
+  ToggleDirective,
 ];
 
 @NgModule({
