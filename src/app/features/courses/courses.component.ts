@@ -16,9 +16,15 @@ export class CoursesComponent implements OnInit {
     'Please use the <b>"Add new course"</b> button to add your first course';
   addCourse = 'Add new course';
 
+  searchStr?: string;
+
   constructor() {}
 
   ngOnInit(): void {
     this.courses = mockedCourseList;
+  }
+
+  search(str: string) {
+    this.searchStr = str;
   }
 }
