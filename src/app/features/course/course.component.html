@@ -18,13 +18,21 @@
 
     <div>
       <h3>Created:</h3>
-      <span> {{ course.creationDate | date: "dd.MM.Y" }}</span>
+      <span> {{ course.creationDate }}</span>
     </div>
 
     <div class="btn-box">
       <app-button [btnName]="showCourse"></app-button>
-      <app-button [iconName]="faPen"></app-button>
-      <app-button [iconName]="faTrash"></app-button>
+
+      <app-button
+        [iconName]="faPen"
+        (click)="editCourse(course.id)"
+      ></app-button>
+
+      <app-button
+        [iconName]="faTrash"
+        (click)="deleteCourse(course.id)"
+      ></app-button>
     </div>
   </div>
 </div>

@@ -14,6 +14,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmailValidatorDirective } from './validators/email-validator.directive';
 import { ToggleDirective } from './directives/toggle.directive';
+import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { SiteLayoutComponent } from './layouts/site-layout/site-layout.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 const COMPONENTS = [
   ButtonComponent,
@@ -24,6 +27,8 @@ const COMPONENTS = [
   WindowComponent,
   EmailValidatorDirective,
   ToggleDirective,
+  AuthLayoutComponent,
+  SiteLayoutComponent,
 ];
 
 @NgModule({
@@ -35,6 +40,7 @@ const COMPONENTS = [
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
   ],
   exports: COMPONENTS,
 })

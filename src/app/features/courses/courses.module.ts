@@ -5,7 +5,7 @@ import { SharedModule } from './../../shared/shared.module';
 import { CourseModule } from './../course/course.module';
 import { LoginModule } from './../login/login.module';
 import { RegistrationModule } from './../registration/registration.module';
-import { CourseEditModule } from './../course-edit/course-edit.module';
+import { CourseEditModule } from '../course-create-edit/course-edit.module';
 
 @NgModule({
   declarations: [CoursesComponent],

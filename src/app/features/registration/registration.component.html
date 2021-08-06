@@ -118,13 +118,13 @@
 
     <app-button
       [btnName]="Registration"
-      type="submit"
+      [btnType]="submit"
       [btnDisabled]="form.invalid"
     ></app-button>
 
     <p>
       If you have an account you can
-      <a href="#">Login</a>
+      <span class="link" (click)="goToLogin()">Login</span>
     </p>
   </form>
 </section>

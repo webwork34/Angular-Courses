@@ -58,13 +58,13 @@
 
     <app-button
       [btnName]="Login"
-      type="submit"
+      [btnType]="submit"
       [btnDisabled]="email.invalid || password.invalid"
     ></app-button>
 
     <p>
       If you don't have an account you can
-      <a href="#">Registration</a>
+      <span class="link" (click)="goToRegister()">Registration</span>
     </p>
   </form>
 </section>
